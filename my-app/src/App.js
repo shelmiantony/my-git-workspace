@@ -1,15 +1,10 @@
 
-
-// import Sample from './Component/Sample'
-import Square from './Component/Test'
-// import About from './Component/About Page/About'
+import Board from './Component/Board'
 function App() {
   return (
     <div className="App">
-       <h1>Welcome to my app</h1>
-        <Square/>
-  {/* <Sample/> */}
-  {/* <About/>  */}
+       <h1>Welcome to Tic-Tac-Toe Game</h1>
+        <Board/>
     </div>
   );
 }
