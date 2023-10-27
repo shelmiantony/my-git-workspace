@@ -2,18 +2,13 @@
 
 
 
-function Test() {
+function Button() {
     return (
       <div>
-  <p>zsdxvbnm,.</p>
-  <p>zsdxvbnm,.</p>
-  <p>zsdxvbnm,.</p>
-  <p>zsdxvbnm,.</p> <p>zsdxvbnm,.</p> <p>zsdxvbnm,.</p> <p>zsdxvbnm,.</p> <p>zsdxvbnm,.</p>
-
-  
+ <button>I'm a button</button>
       </div>
     );
   }
   
-  export default  Test;
+  export default  Button;
   
