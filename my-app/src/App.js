@@ -1,7 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
+
 
 import Sample from './Component/Sample'
+import Test from './Component/Test'
 function App() {
   return (
     <div className="App">
