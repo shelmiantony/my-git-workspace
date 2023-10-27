@@ -2,13 +2,18 @@
 
 
 
-function Button() {
+function Square() {
     return (
       <div>
- <button>I'm a button</button>
+ <button className="Square">X</button>
+ <button className="Square">X</button>
+ <button className="Square">X</button>
+ <button className="Square">X</button>
+ <button className="Square">X</button>
+ <button className="Square">X</button>
       </div>
     );
   }
   
-  export default  Button;
+  export default  Square;
   
