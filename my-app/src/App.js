@@ -1,6 +1,7 @@
 
 
 import Game from './Component/Game'
+import '../src/App.css'
 function App() {
   return (
     <div className="App">
