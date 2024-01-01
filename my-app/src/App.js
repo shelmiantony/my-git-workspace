@@ -1,5 +1,6 @@
 
-import Game from './Component/Board'
+
+import Game from './Component/Game'
 function App() {
   return (
     <div className="App">
