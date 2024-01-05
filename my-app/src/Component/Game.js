@@ -26,9 +26,14 @@ export default function Game() {
     } else {
       description = 'Go to game start';
     }
+    const isCurrentMove = move === currentMove
     return (
       <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+        {/* For the current move only, show “You are at move #…” instead of a button. */}
+        {isCurrentMove?(<span>{description}</span>): 
+         <button onClick={() => jumpTo(move)}>{description}</button>
+         }
+      
       </li>
     );
   });
