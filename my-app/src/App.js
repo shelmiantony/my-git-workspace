@@ -1,6 +1,6 @@
 
 
-import Game from './Component/Game'
+import Game from './Component/Tic-Tac-Toe/Game'
 import '../src/App.css'
 function App() {
   return (
