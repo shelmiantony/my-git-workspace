@@ -36,7 +36,7 @@ export const filterTodo = (filter) =>({
     payload:{filter}
 
 })
-export const markALlCompleted = () =>({
+export const markAllCompleted = () =>({
     type:MARK_ALL_COMPLETED,
    
 

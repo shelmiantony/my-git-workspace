@@ -64,7 +64,7 @@ import { ADD_TODO,
                      filter:state.filter,
                     searchTerm:action.payload.searchTerm
                }
-         case MARK_COMPLETED:
+         case MARK_ALL_COMPLETED:
                return {
                         todos: state.todos.map((todo) =>({...todo,completed: true})),
                         filter:state.filter,

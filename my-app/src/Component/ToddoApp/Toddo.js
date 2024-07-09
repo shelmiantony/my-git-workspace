@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { BsPlus, BsSearch } from 'react-icons/bs';
 import { addTodo, updateSearchTerm } from '../../Redux/action';
 import FilterCom from './FilterCom';
+import TodoList from './TodoList';
 
 function Todo() {
   const [todos, setTodos] = useState('');
@@ -74,6 +75,7 @@ function Todo() {
         </button>
       </div>
       </div>
+      <TodoList/>
     </div>
   );
 }
