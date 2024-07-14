@@ -6,6 +6,7 @@ import About from './Component/About/About';
 import Navbar from './Component/Navbar/Navbar';
 import Projects from './Component/Projects/Project';
 import Skills from './Component/Skills/Skills';
+import Footer from './Component/Footer/Footer';
 // import Testimonials from './Component/Testimonials/';
 // import Todo from './Component/ToddoApp/Toddo';
 // import Game from './Component/TicTacToe/Game';
@@ -25,6 +26,7 @@ function App() {
         <Route path ='/About' element ={<About/>}></Route>
         <Route path ='/Projects' element ={<Projects/>}></Route>
       </Routes>
+      <Footer/>
       </div>
     </Router>
   )
