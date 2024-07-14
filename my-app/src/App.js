@@ -2,8 +2,15 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './Component/Home/HomePage';
-import Game from './Component/TicTacToe/Game';
-import Todo from './Component/ToddoApp/Toddo';
+import About from './Component/About/About';
+import Contact from './Component/Contact/Contact';
+import Projects from './Component/Projects/Project';
+import Skills from './Component/Skills/Skills';
+// import Testimonials from './Component/Testimonials/';
+// import Todo from './Component/ToddoApp/Toddo';
+// import Game from './Component/TicTacToe/Game';
+
+
 
 
 function App() {
@@ -12,8 +19,10 @@ function App() {
     <div>
       <Routes>
         <Route path='' element={<Home/>}></Route>
-        <Route path='/game' element={<Game/>}></Route>
-        <Route path='/Todo' element={<Todo/>}></Route>
+        {/* <Route path='/game' element={<Game/>}></Route>
+        <Route path='/Todo' element={<Todo/>}></Route> */}
+        <Route path ='/About' element ={<About/>}></Route>
+        <Route path ='/Projects' element ={<Projects/>}></Route>
       </Routes>
       </div>
     </Router>
