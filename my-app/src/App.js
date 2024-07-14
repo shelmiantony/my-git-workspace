@@ -15,7 +15,7 @@ import Skills from './Component/Skills/Skills';
 
 function App() {
   return (
-    <Router>
+    <Router className='text-gray-400 bg-gray-900 body-font'>
     <div>
       <Routes>
         <Route path='' element={<Home/>}></Route>
