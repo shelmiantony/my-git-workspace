@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './Component/Home/HomePage';
 import About from './Component/About/About';
-import Contact from './Component/Contact/Contact';
+import Navbar from './Component/Navbar/Navbar';
 import Projects from './Component/Projects/Project';
 import Skills from './Component/Skills/Skills';
 // import Testimonials from './Component/Testimonials/';
@@ -15,8 +15,9 @@ import Skills from './Component/Skills/Skills';
 
 function App() {
   return (
-    <Router>
+    <Router className='text-gray-400 bg-gray-900 body-font'>
     <div>
+    <Navbar />
       <Routes>
         <Route path='' element={<Home/>}></Route>
         {/* <Route path='/game' element={<Game/>}></Route>
