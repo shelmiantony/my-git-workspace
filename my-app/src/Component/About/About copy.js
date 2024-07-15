@@ -1,60 +1,103 @@
 import React from 'react';
-import { Container, Typography, Box, Button, Card, CardContent, Avatar, IconButton, Grid, Paper } from '@mui/material';
-import { LinkedIn, GitHub, Twitter } from '@mui/icons-material';
+import { Container, Typography, Card, CardContent, Box, Grid, Button } from '@mui/material';
 import Profile from '../../Assets/Profile.jpg';
 
-function About() {
+function Resume() {
+  const experience = [
+    {
+      title: "Software Engineer",
+      company: "Citrus Informatics Private Limited",
+      duration: "2021 - Present",
+      description: "Worked on various projects using React, Redux, and other modern web technologies.",
+    },
+    {
+      title: "Junior Developer",
+      company: "Some Company",
+      duration: "2019 - 2021",
+      description: "Assisted in the development of web applications and worked on front-end features.",
+    },
+  ];
+
+  const education = [
+    {
+      degree: "Bachelor of Science in Computer Science",
+      institution: "Some University",
+      duration: "2015 - 2019",
+      description: "Graduated with honors and specialized in software development and algorithms.",
+    },
+  ];
+
   return (
-    <section id='about' className='text-gray-900 py-20' style={{ backgroundColor: '#F4ECE6' }}>
-      <Container>
-        <Paper style={{ padding: '20px', backgroundColor: '#F4ECE6' }}>
-          <Grid container spacing={2}>
-            <Grid item xs={12} md={6}>
-              <Box className='flex flex-col items-center'>
-                <Card className='bg-gray-800'>
-                  <CardContent className='flex flex-col items-center'>
-                    <Avatar src={Profile} alt='Profile' className='w-32 h-32 mb-4 rounded-full' />
-                    <Typography variant='h4' component='h1' className='text-white mb-2'>
-                      Hi, I'm Shelmi
-                    </Typography>
-                    <Box className='flex justify-center space-x-4 mb-4'>
-                      <IconButton href='https://www.linkedin.com' target='_blank' className='text-white'>
-                        <LinkedIn />
-                      </IconButton>
-                      <IconButton href='https://github.com' target='_blank' className='text-white'>
-                        <GitHub />
-                      </IconButton>
-                      <IconButton href='https://twitter.com' target='_blank' className='text-white'>
-                        <Twitter />
-                      </IconButton>
-                    </Box>
-                  </CardContent>
-                </Card>
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Box className='flex-grow flex flex-col items-center md:items-start text-center md:text-left'>
-                <Typography variant='h3' component='h1' className='mb-4 font-medium text-gray-900'>
-                  About Me
+    <Container maxWidth="lg" className="py-20">
+      <Typography variant="h3" component="h1" className="mb-10 font-medium text-gray-900">
+        Resume
+      </Typography>
+      <Grid container spacing={4}>
+        <Grid item xs={12}>
+          <Typography variant="h4" component="h2" className="mb-4 font-semibold text-gray-800">
+            Experience
+          </Typography>
+        </Grid>
+        {experience.map((job, index) => (
+          <Grid item xs={12} md={6} key={index}>
+            <Card className="bg-gray-200">
+              <CardContent>
+                <Typography variant="h5" component="h3" className="text-gray-900">
+                  {job.title}
                 </Typography>
-                <Typography variant='body1' component='p' className='mb-8 leading-relaxed text-gray-600'>
-                  To achieve a challenging position in a professional organization through self-improvement by excelling in all responsibilities with sincere hard work, dedication & commitment. To work towards the development of the organization & grow with it.
+                <Typography variant="body1" className="text-gray-700">
+                  {job.company}
                 </Typography>
-                <Box className='flex justify-center md:justify-start space-x-4'>
-                  <Button href='#resume' variant='contained' color='primary'>
-                    Resume
-                  </Button>
-                  <Button href='#projects' variant='contained' color='secondary'>
-                    See My Projects
-                  </Button>
-                </Box>
-              </Box>
-            </Grid>
+                <Typography variant="body2" className="text-gray-600">
+                  {job.duration}
+                </Typography>
+                <Typography variant="body2" className="text-gray-600">
+                  {job.description}
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
-        </Paper>
-      </Container>
-    </section>
+        ))}
+        <Grid item xs={12}>
+          <Typography variant="h4" component="h2" className="mb-4 font-semibold text-gray-800">
+            Education
+          </Typography>
+        </Grid>
+        {education.map((edu, index) => (
+          <Grid item xs={12} md={6} key={index}>
+            <Card className="bg-gray-200">
+              <CardContent>
+                <Typography variant="h5" component="h3" className="text-gray-900">
+                  {edu.degree}
+                </Typography>
+                <Typography variant="body1" className="text-gray-700">
+                  {edu.institution}
+                </Typography>
+                <Typography variant="body2" className="text-gray-600">
+                  {edu.duration}
+                </Typography>
+                <Typography variant="body2" className="text-gray-600">
+                  {edu.description}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+        <Grid item xs={12}>
+          <Box className="flex justify-center md:justify-start space-x-4">
+            <Button
+              href="/path/to/your/cv.pdf"
+              download
+              variant="contained"
+              color="primary"
+            >
+              Download CV
+            </Button>
+          </Box>
+        </Grid>
+      </Grid>
+    </Container>
   );
 }
 
-export default About;
+export default Resume;
