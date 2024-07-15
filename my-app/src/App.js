@@ -7,6 +7,7 @@ import Navbar from './Component/Navbar/Navbar';
 import Projects from './Component/Projects/Project';
 import Skills from './Component/Skills/Skills';
 import Footer from './Component/Footer/Footer';
+import Resume from './Component/Resume/Resume'
 // import Testimonials from './Component/Testimonials/';
 // import Todo from './Component/ToddoApp/Toddo';
 // import Game from './Component/TicTacToe/Game';
@@ -23,6 +24,7 @@ function App() {
         <Route path='' element={<Home/>}></Route>
         {/* <Route path='/game' element={<Game/>}></Route>
         <Route path='/Todo' element={<Todo/>}></Route> */}
+        <Route path ='/Resume' element ={<Resume/>}></Route>
         <Route path ='/About' element ={<About/>}></Route>
         <Route path ='/Projects' element ={<Projects/>}></Route>
       </Routes>

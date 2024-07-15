@@ -1,0 +1,8 @@
+<Button
+  href="/cv.pdf"
+  download
+  variant="contained"
+  color="primary"
+>
+  Download CV
+</Button>
