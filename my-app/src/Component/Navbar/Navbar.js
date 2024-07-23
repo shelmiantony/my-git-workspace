@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import React from "react";
 import Projects from "../Projects/Project";
 import About from "../About/About";
-
 function Navbar() {
   return (
     <AppBar position="static" sx={{ backgroundColor: "#4CAF50" }}>
