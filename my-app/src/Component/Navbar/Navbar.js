@@ -19,12 +19,12 @@ function Navbar() {
         <Button component={Link} to="/Projects" color="inherit">
          Projects
         </Button>
-        <Button component={Link} to="/Projects" color="inherit">
+        <Button component={Link} to="/Contact" color="inherit">
           Contact
         </Button>
-        <Button component={Link} to="/sample" color="inherit">
+        {/* <Button component={Link} to="/sample" color="inherit">
          Sample
-        </Button>
+        </Button> */}
       </Toolbar>
     </AppBar>
   );

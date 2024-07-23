@@ -29,10 +29,7 @@ function Project() {
         <Box display='flex'justifyContent='center' mb={4}>
           <Card className="bg-gray-200" style={{ maxWidth: '600px', width: '100%' }}>
             <CardContent>
-      
-            <Typography variant="h5">
-Toddo App:
-            </Typography>
+
           <Game />
      
           </CardContent>
