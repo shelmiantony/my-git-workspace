@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import Profile from "../../Assets/Profile.jpg";
 import Experience from "../Experience/Experience";
+import Education from "../Education/Education";
 function Resume() {
   const experience = [
     {
@@ -55,104 +56,39 @@ on Experience on MapInfo, AutoCAD and SpatialNet
 
   const education = [
     {
-      degree: "Bachelor of Science in Computer Science",
-      institution: "Some University",
-      duration: "2015 - 2019",
-      description:
-        "Graduated with honors and specialized in software development and algorithms.",
+      degree: "B.Tech. in Electronics and Communications Engineering",
+      institution: "Calicut University",
+      duration: "2015 - 2018",
+      
+    },
+    {
+      degree: "Diploma in Electronics and Communications Engineering",
+      institution: "State Board of Technical Education"
+,
+      duration: "2012 - 2015",
+      
     },
   ];
 
   return (
-    <Container maxWidth="lg" className="py-20">
+    <Container maxWidth="lg" className="py-20" style={{backgroundColor:'#F4ECE6'}}>
+      <Box py={6} textAlign='center'>
       <Typography
         variant="h3"
         component="h1"
         className="mb-10 font-medium text-gray-900">
         Resume
       </Typography>
+      </Box>
       <Grid container spacing={4}>
        
         <Grid item xs={12}>
           <Experience experience={experience} />
         </Grid>
         <Grid item xs={12}>
-          <Typography
-            variant="h4"
-            component="h2"
-            className="mb-4 font-semibold text-gray-800">
-            Education
-          </Typography>
+          <Education education={education}/>
         </Grid>
-        {education.map((edu, index) => (
-          <Grid item xs={12} md={6} key={index}>
-            <Card className="bg-gray-200">
-              <CardContent>
-                <Grid container spacing={2}>
-                  <Grid item xs={6}>
-                    <Typography
-                      variant="body1"
-                      className="text-gray-700 font-semibold">
-                      Degree:
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Typography variant="body1" className="text-gray-900">
-                      {edu.degree}
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Typography
-                      variant="body1"
-                      className="text-gray-700 font-semibold">
-                      Institution:
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Typography variant="body1" className="text-gray-900">
-                      {edu.institution}
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Typography
-                      variant="body1"
-                      className="text-gray-700 font-semibold">
-                      Duration:
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Typography variant="body1" className="text-gray-900">
-                      {edu.duration}
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Typography
-                      variant="body1"
-                      className="text-gray-700 font-semibold">
-                      Description:
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Typography variant="body1" className="text-gray-900">
-                      {edu.description}
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </CardContent>
-            </Card>
-          </Grid>
-        ))}
-        <Grid item xs={12}>
-          <Box className="flex justify-center md:justify-start space-x-4">
-            <Button
-              href="/path/to/your/cv.pdf"
-              download
-              variant="contained"
-              color="primary">
-              Download CV
-            </Button>
-          </Box>
-        </Grid>
+     
       </Grid>
     </Container>
   );

@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import React from "react";
 import Projects from "../Projects/Project";
 import About from "../About/About";
+
 function Navbar() {
   return (
     <AppBar position="static" sx={{ backgroundColor: "#4CAF50" }}>
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          My Portfolio
+          Shelmi K.A/React Developer
         </Typography>
         <Button component={Link} to="/About" color="inherit">
           About Me
@@ -21,6 +22,9 @@ function Navbar() {
         </Button>
         <Button component={Link} to="/Projects" color="inherit">
           Contact
+        </Button>
+        <Button component={Link} to="/sample" color="inherit">
+         Sample
         </Button>
       </Toolbar>
     </AppBar>

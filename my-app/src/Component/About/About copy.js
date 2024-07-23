@@ -1,68 +1,59 @@
-import React from 'react';
-import { Card, CardContent, Grid, Typography, Box } from '@mui/material';
+import React from "react";
+import {
+  Container,
+  Typography,
+  Card,
+  CardContent,
+  Box,
+  Grid,
+} from "@mui/material";
+import Game from "../TicTacToe/Game";
+import Todo from "../ToddoApp/Toddo";
 
-const ExperienceSection = ({ experience }) => {
+function Project() {
   return (
-    <Grid container spacing={4} justifyContent="center">
-      <Grid item xs={12}>
-        <Typography variant="h4" component="h2" className="mb-4 font-semibold text-gray-800" align="center">
-          Experience
+    <Container
+      maxWidth="lg"
+      className="py-20"
+      style={{ backgroundColor: "#F4ECE6" }}
+    >
+      <Box py={6} textAlign="center">
+        <Typography
+          variant="h3"
+          component="h1"
+          className="mb-10 font-medium text-gray-900"
+        >
+          Projects
         </Typography>
-      </Grid>
-      {experience.map((job, index) => (
-        <Grid item xs={12} md={8} key={index}>
-          <Box display="flex" justifyContent="center" mb={4}>
-            <Card className="bg-gray-200" style={{ maxWidth: '600px', width: '100%' }}>
-              <CardContent>
-                <Grid container spacing={2}>
-                  <Grid item xs={6}>
-                    <Typography variant="body1" className="text-gray-700 font-semibold">
-                      {job.duration}
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Typography variant="body1" className="text-gray-900">
-                      {''}
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Typography variant="body1" className="text-gray-700 font-semibold">
-                      Job Position:
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Typography variant="body1" className="text-gray-900">
-                      {job.title}
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Typography variant="body1" className="text-gray-700 font-semibold">
-                      Company:
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Typography variant="body1" className="text-gray-900">
-                      {job.company}
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Typography variant="body1" className="text-gray-700 font-semibold">
-                      Description:
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Typography variant="body1" className="text-gray-900">
-                      {job.description}
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </CardContent>
-            </Card>
-          </Box>
+      </Box>
+      <Grid container spacing={4}>
+        <Grid item xs={12} md={6}>
+          <Card>
+            <CardContent>
+              <Box textAlign="center" mb={2}>
+                <Typography variant="h5" component="h2">
+                  Toddo App
+                </Typography>
+              </Box>
+              <Todo />
+            </CardContent>
+          </Card>
         </Grid>
-      ))}
-    </Grid>
+        <Grid item xs={12} md={6}>
+          <Card>
+            <CardContent>
+              <Box textAlign="center" mb={2}>
+                <Typography variant="h5" component="h2">
+                  Tic Tac Toe Game
+                </Typography>
+              </Box>
+              <Game />
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
+    </Container>
   );
-};
+}
 
-export default ExperienceSection;
+export default Project;
