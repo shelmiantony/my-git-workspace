@@ -91,10 +91,10 @@ function About() {
                 Here's who I am & what I do
               </Typography>
               <Box className="flex justify-center md:justify-start space-x-4 pt-11">
-                <Button href="#resume" variant="contained" color="primary">
+                <Button href="/resume" variant="contained" color="primary">
                   Resume
                 </Button>
-                <Button href="#projects" variant="contained" color="secondary">
+                <Button href="/projects" variant="contained" color="secondary">
                   Projects
                 </Button>
               </Box>
