@@ -9,33 +9,23 @@ import {
   Button
 } from "@mui/material";
 
-const Contact = () => {
+const ExperienceSection = ({ education }) => {
   return (
     <Grid container spacing={4} justifyContent="center">
-      <Grid item xs={12}>
-        <Box display="flex" justifyContent="center" mb={4}  pt={4}>
-          <Typography
-            variant="h2"
-            component="h1"
-            sx={{ 
-              mb: 4, 
-             
-              color: 'gray.900', 
-              pt: 11,
-              fontSize: '2.5rem', // Adjust size as needed
-              fontWeight: 600 // Adjust thickness as needed
-            }}
-            align="center">
-            Let's Talk
-          </Typography>
-        </Box>
+      <Grid item xs={6}>
+        <Typography
+          variant="h5"
+          component="h2"
+          className="mb-4 font-bold text-gray-800">
+          Contact
+        </Typography>
       </Grid>
 
       <Grid item xs={12} md={12}>
         <Box display="flex" justifyContent="center" mb={4}>
           <Card
             className="bg-gray-200"
-            sx={{ maxWidth: "600px", width: "100%", py: 4 }}>
+            style={{ maxWidth: "600px", width: "100%" }}>
             <CardContent>
               <Grid container spacing={2}>
                 <Grid item xs={6}>
@@ -45,56 +35,58 @@ const Contact = () => {
                     name="fstname"
                     id="standard-basic"
                     variant="standard"
-                    autoComplete="fstname"
-                  />
+                    autoComplete="fstname"></TextField>
                 </Grid>
                 <Grid item xs={6}>
                   <TextField
                     required
-                    id="standard-basic"
+                     id="standard-basic"
                     variant="standard"
-                    label="Last Name"
+                    label="last Name"
                     name="lname"
-                    autoComplete="lname"
-                  />
+                    autoComplete="lname">
+                    
+                  </TextField>
                 </Grid>
-                <Grid item xs={12} md={12}>
-                  <TextField
+                <Grid item  xs={12} md={12}>
+                <TextField
                     required
                     fullWidth
-                    id="standard-basic"
+                     id="standard-basic"
                     variant="standard"
                     label="Email"
                     name="email"
-                    autoComplete="email"
-                  />
+                    autoComplete="email">
+                    
+                  </TextField>
                 </Grid>
-                <Grid item xs={12} md={12}>
-                  <TextField
+                <Grid item  xs={12} md={12}>
+                <TextField
                     required
                     fullWidth
-                    id="standard-basic"
+                     id="standard-basic"
                     variant="standard"
                     label="Subject"
                     name="subject"
-                    autoComplete="subject"
-                  />
+                    autoComplete="subject">
+                    
+                  </TextField>
                 </Grid>
-                <Grid item xs={12} md={12}>
-                  <TextField
+                <Grid item  xs={12} md={12}>
+                <TextField
                     required
                     fullWidth
-                    id="standard-basic"
+                     id="standard-basic"
                     variant="standard"
                     label="Message"
                     name="message"
-                    autoComplete="message"
-                  />
+                    autoComplete="message">
+                    
+                  </TextField>
                 </Grid>
-                <Grid item xs={6} sx={{pt:2}}>
-                  <Button variant="contained" color="primary">
-                    Send
-                  </Button>
+                <Grid item xs={6}>
+               <Button variant="contained"
+            color="primary">Send</Button>
                 </Grid>
               </Grid>
             </CardContent>
@@ -105,4 +97,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ExperienceSection;

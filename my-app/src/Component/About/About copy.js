@@ -31,7 +31,7 @@ function Contact() {
           <Grid item xs={12}>
             <TextField
               required
-              fullWidth
+              
               id="name"
               label="Name"
               name="name"
