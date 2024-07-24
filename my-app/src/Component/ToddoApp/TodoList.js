@@ -8,9 +8,10 @@ const TodoList = () => {
     const searchTerm = state.searchTerm.toLowerCase(); // Convert search term to lowercase for case-insensitive search
 
     return todos.filter((todo) => {
-      const matchesFilter = (filter === 'COMPLETED' && todo.completed) ||
-        (filter === 'INCOMPLETE' && !todo.completed) ||
-        filter === 'ALL';
+      const matchesFilter =
+        (filter === "COMPLETED" && todo.completed) ||
+        (filter === "INCOMPLETE" && !todo.completed) ||
+        filter === "ALL";
 
       const matchesSearch = todo.text.toLowerCase().includes(searchTerm);
 
@@ -18,7 +19,7 @@ const TodoList = () => {
     });
   });
 
-  console.log('Filtered Todos:', filteredTodos);
+  console.log("Filtered Todos:", filteredTodos);
 
   return (
     <ul>

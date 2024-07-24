@@ -26,26 +26,24 @@ function Project() {
       </Box>
       <Grid container spacing={4}>
         <Grid item xs={12}>
-        <Box display='flex'justifyContent='center' mb={4}>
-          <Card className="bg-gray-200" style={{ maxWidth: '600px', width: '100%' }}>
-            <CardContent>
-
-          <Game />
-     
-          </CardContent>
-          </Card>
+          <Box display="flex" justifyContent="center" mb={4}>
+            <Card
+              className="bg-gray-200"
+              style={{ maxWidth: "600px", width: "100%" }}>
+              <CardContent>
+                <Game />
+              </CardContent>
+            </Card>
           </Box>
         </Grid>
         <Grid item xs={12}>
-        <Box display='flex'justifyContent='center' mb={4}>
-          <Card>
-            <CardContent>
-            <Todo />
-            </CardContent>
-          </Card>
-          
+          <Box display="flex" justifyContent="center" mb={4}>
+            <Card>
+              <CardContent>
+                <Todo />
+              </CardContent>
+            </Card>
           </Box>
-         
         </Grid>
       </Grid>
     </Container>

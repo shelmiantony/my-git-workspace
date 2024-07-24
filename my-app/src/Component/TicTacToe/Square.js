@@ -1,6 +1,4 @@
-
-import React from 'react';
-
+import React from "react";
 
 function Square({ value, onSquareClick }) {
   return (
@@ -10,5 +8,4 @@ function Square({ value, onSquareClick }) {
   );
 }
 
-  export default  Square;
-  
+export default Square;
