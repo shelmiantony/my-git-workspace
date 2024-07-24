@@ -1,31 +1,28 @@
 import { useState } from "react";
 import Square from "./Square";
 
-
-
-
 function Board({ xIsNext, squares, onPlay }) {
-        function handleClick(i) {
-          if (calculateWinner(squares) || squares[i]) {
-            return;
-          }
-          const nextSquares = squares.slice();
-          nextSquares[i]= xIsNext ?  nextSquares[i] = 'X': nextSquares[i] = 'O';
-          onPlay(nextSquares);
-        }
-      
-        const winner = calculateWinner(squares);
-        let status;
-        if (winner) {
-          status = 'Winner: ' + winner;
-        } else {
-          status = 'Next player: ' + (xIsNext ? 'X' : 'O');
-        }
-      
-        return (
-          <>
-            <div className="status">{status}</div>
-            {/* <div className="board-row">
+  function handleClick(i) {
+    if (calculateWinner(squares) || squares[i]) {
+      return;
+    }
+    const nextSquares = squares.slice();
+    nextSquares[i] = xIsNext ? (nextSquares[i] = "X") : (nextSquares[i] = "O");
+    onPlay(nextSquares);
+  }
+
+  const winner = calculateWinner(squares);
+  let status;
+  if (winner) {
+    status = "Winner: " + winner;
+  } else {
+    status = "Next player: " + (xIsNext ? "X" : "O");
+  }
+
+  return (
+    <>
+      <div className="status">{status}</div>
+      {/* <div className="board-row">
               <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
               <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
               <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
@@ -41,30 +38,30 @@ function Board({ xIsNext, squares, onPlay }) {
               <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
             </div> */}
 
-            {/* Avoiding hardcoding of Sqaures */}
-            {
-  Array(3).fill(null).map((_, rowIndex) => (
-    <div key={rowIndex} className="board-row">
-      {
-        Array(3).fill(null).map((_, colIndex) => {
-          const squareIndex = rowIndex * 3 + colIndex;
-          return (
-            <Square
-              key={colIndex}
-              value={squares[squareIndex]}
-              onSquareClick={() => handleClick(squareIndex)}
-            />
-          );
-        })
-      }
-    </div>
-  ))
+      {/* Avoiding hardcoding of Sqaures */}
+      {Array(3)
+        .fill(null)
+        .map((_, rowIndex) => (
+          <div key={rowIndex} className="board-row">
+            {Array(3)
+              .fill(null)
+              .map((_, colIndex) => {
+                const squareIndex = rowIndex * 3 + colIndex;
+                return (
+                  <Square
+                    key={colIndex}
+                    value={squares[squareIndex]}
+                    onSquareClick={() => handleClick(squareIndex)}
+                  />
+                );
+              })}
+          </div>
+        ))}
+    </>
+  );
 }
-          </>
-        );
-      }
-  
-  export default  Board;
+
+export default Board;
 
 function calculateWinner(squares) {
   const lines = [
@@ -82,7 +79,11 @@ function calculateWinner(squares) {
   if (squares && Array.isArray(squares)) {
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];
-      if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+      if (
+        squares[a] &&
+        squares[a] === squares[b] &&
+        squares[a] === squares[c]
+      ) {
         return squares[a];
       }
     }

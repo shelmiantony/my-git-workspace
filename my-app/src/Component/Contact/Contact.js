@@ -6,7 +6,7 @@ import {
   Typography,
   Box,
   TextField,
-  Button
+  Button,
 } from "@mui/material";
 
 const Contact = () => {
@@ -14,16 +14,16 @@ const Contact = () => {
     <div style={{ backgroundColor: "#F4ECE6" }}>
       <Grid container spacing={4} justifyContent="center">
         <Grid item xs={12}>
-          <Box display="flex" justifyContent="center" mb={4} >
+          <Box display="flex" justifyContent="center" mb={4}>
             <Typography
               variant="h2"
               component="h1"
-              sx={{ 
-                mb: 4, 
-                color: 'gray.900', 
-                 pt: 4,  // Adjust the padding top value here
-                fontSize: '2.5rem', // Adjust size as needed
-                fontWeight: 600 // Adjust thickness as needed
+              sx={{
+                mb: 4,
+                color: "gray.900",
+                pt: 4, // Adjust the padding top value here
+                fontSize: "2.5rem", // Adjust size as needed
+                fontWeight: 600, // Adjust thickness as needed
               }}
               align="center">
               Let's Talk

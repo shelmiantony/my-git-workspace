@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function sample() {
-  return (
-    <div>sample</div>
-  )
+  return <div>sample</div>;
 }
 
-export default sample
+export default sample;

@@ -26,7 +26,7 @@ function About() {
                   // padding: "20px",
                   backgroundColor: "#F4ECE6",
                   width: "500px",
-                  paddingTop:'11px'
+                  paddingTop: "11px",
                 }}>
                 <CardContent className="flex flex-col items-center">
                   <img
@@ -75,13 +75,13 @@ function About() {
               <Typography
                 variant="h2"
                 component="h1"
-                sx={{ 
-                  mb: 4, 
-                  fontWeight: 'extrabold', 
-                  color: 'gray.900', 
+                sx={{
+                  mb: 4,
+                  fontWeight: "extrabold",
+                  color: "gray.900",
                   pt: 11,
-                  fontSize: '5rem', // Adjust size as needed
-                  fontWeight: 800 // Adjust thickness as needed
+                  fontSize: "5rem", // Adjust size as needed
+                  fontWeight: 800, // Adjust thickness as needed
                 }}>
                 Hello
               </Typography>

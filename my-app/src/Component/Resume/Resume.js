@@ -59,36 +59,34 @@ on Experience on MapInfo, AutoCAD and SpatialNet
       degree: "B.Tech. in Electronics and Communications Engineering",
       institution: "Calicut University",
       duration: "2015 - 2018",
-      
     },
     {
       degree: "Diploma in Electronics and Communications Engineering",
-      institution: "State Board of Technical Education"
-,
+      institution: "State Board of Technical Education",
       duration: "2012 - 2015",
-      
     },
   ];
 
   return (
-    <Container maxWidth="lg" className="py-20" style={{backgroundColor:'#F4ECE6'}}>
-      <Box py={6} textAlign='center'>
-      <Typography
-        variant="h3"
-        component="h1"
-        className="mb-10 font-medium text-gray-900">
-        Resume
-      </Typography>
+    <Container
+      maxWidth="lg"
+      className="py-20"
+      style={{ backgroundColor: "#F4ECE6" }}>
+      <Box py={6} textAlign="center">
+        <Typography
+          variant="h3"
+          component="h1"
+          className="mb-10 font-medium text-gray-900">
+          Resume
+        </Typography>
       </Box>
       <Grid container spacing={4}>
-       
         <Grid item xs={12}>
           <Experience experience={experience} />
         </Grid>
         <Grid item xs={12}>
-          <Education education={education}/>
+          <Education education={education} />
         </Grid>
-     
       </Grid>
     </Container>
   );

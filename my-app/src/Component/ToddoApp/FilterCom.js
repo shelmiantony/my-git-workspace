@@ -1,7 +1,7 @@
 // FilterButtons.jsx
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { filterTodos, markAllCompleted } from '../../Redux/action';
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { filterTodos, markAllCompleted } from "../../Redux/action";
 
 const FilterButtons = () => {
   const dispatch = useDispatch();
@@ -16,8 +16,7 @@ const FilterButtons = () => {
       <select
         className="text-sm px-2 py-1 rounded border border-gray-300 focus:outline-none"
         value={currentFilter}
-        onChange={(e) => handleFilter(e.target.value)}
-      >
+        onChange={(e) => handleFilter(e.target.value)}>
         <option value="ALL">Default</option>
         <option value="COMPLETED">Completed</option>
         <option value="INCOMPLETE">Incomplete</option>
@@ -25,8 +24,7 @@ const FilterButtons = () => {
 
       <button
         className="text-sm px-2 py-1 bg-purple-500 text-white rounded ml-2"
-        onClick={() => dispatch(markAllCompleted())}
-      >
+        onClick={() => dispatch(markAllCompleted())}>
         Mark All Completed
       </button>
     </div>

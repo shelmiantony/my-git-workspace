@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Board from './Board';
+import React, { useState } from "react";
+import Board from "./Board";
 
 import {
   Container,
@@ -27,9 +27,9 @@ export default function Game() {
   }
 
   const moves = history.map((squares, move) => {
-    const description = move > 0 ? 'Go to move #' + move : 'Go to game start';
+    const description = move > 0 ? "Go to move #" + move : "Go to game start";
     const isCurrentMove = move === currentMove;
-    
+
     return (
       <li key={move}>
         {isCurrentMove ? (
@@ -50,7 +50,11 @@ export default function Game() {
       </Box>
       <div className="game">
         <div className="game-board">
-          <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+          <Board
+            xIsNext={xIsNext}
+            squares={currentSquares}
+            onPlay={handlePlay}
+          />
         </div>
         <div className="game-info">
           <ol>{moves}</ol>
