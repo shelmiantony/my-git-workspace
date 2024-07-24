@@ -12,7 +12,7 @@ import {
   FaCheck,
   FaTimes,
 } from "react-icons/fa";
-import { FiEdit } from "react-icons/fi";
+// import { FiEdit } from "react-icons/fi";
 
 const TodoItem = ({ todo, index }) => {
   const dispatch = useDispatch();

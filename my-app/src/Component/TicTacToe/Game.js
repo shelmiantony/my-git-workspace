@@ -4,11 +4,7 @@ import Board from "./Board";
 import {
   Container,
   Typography,
-  Card,
-  CardContent,
-  Box,
-  Grid,
-  Button,
+  Box
 } from "@mui/material";
 export default function Game() {
   const [history, setHistory] = useState([Array(9).fill(null)]);

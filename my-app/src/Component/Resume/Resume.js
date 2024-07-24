@@ -2,13 +2,9 @@ import React from "react";
 import {
   Container,
   Typography,
-  Card,
-  CardContent,
   Box,
-  Grid,
-  Button,
+  Grid
 } from "@mui/material";
-import Profile from "../../Assets/Profile.jpg";
 import Experience from "../Experience/Experience";
 import Education from "../Education/Education";
 function Resume() {
