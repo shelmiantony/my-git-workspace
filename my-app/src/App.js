@@ -23,7 +23,7 @@ function App() {
     <div>
     <Navbar />
       <Routes>
-        <Route path='' element={<Home/>}></Route>
+        <Route path='' element={<About/>}></Route>
         {/* <Route path='/game' element={<Game/>}></Route>
         <Route path='/Todo' element={<Todo/>}></Route> */}
         <Route path ='/Resume' element ={<Resume/>}></Route>
