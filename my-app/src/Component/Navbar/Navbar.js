@@ -10,12 +10,14 @@ function Navbar() {
   return (
     <AppBar position="sticky" sx={{ backgroundColor: "#FFFFFF" }}>
       <Toolbar>
-        <Typography 
+      <Typography 
           variant="h6" 
           component="div" 
           sx={{ flexGrow: 1, color: "#000000" }} // Set font color to black
         >
-          Shelmi K.A/React Developer
+          <span style={{ fontWeight: 700, fontSize: '1.5rem' }}>Shelmi K.A</span><span>{' / '}</span>
+          
+          <span style={{ fontWeight: 400, fontSize: '1rem' }}>React Developer</span>
         </Typography>
         <Button 
           component={Link} 
