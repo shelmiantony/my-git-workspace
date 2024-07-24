@@ -5,8 +5,7 @@ import {
   Card,
   CardContent,
   Box,
-  Grid,
-  Button,
+  Grid
 } from "@mui/material";
 import Game from "../TicTacToe/Game";
 import Todo from "../ToddoApp/Toddo";

@@ -6,7 +6,6 @@ import {
   Button,
   Card,
   CardContent,
-  Avatar,
   IconButton,
   Grid,
   Paper,
@@ -77,7 +76,6 @@ function About() {
                 component="h1"
                 sx={{
                   mb: 4,
-                  fontWeight: "extrabold",
                   color: "gray.900",
                   pt: 11,
                   fontSize: "5rem", // Adjust size as needed

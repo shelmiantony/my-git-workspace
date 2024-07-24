@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Home from "./Component/Home/HomePage";
+// import Home from "./Component/Home/HomePage";
 import About from "./Component/About/About";
 import Navbar from "./Component/Navbar/Navbar";
 import Projects from "./Component/Projects/Project";
-import Skills from "./Component/Skills/Skills";
+// import Skills from "./Component/Skills/Skills";
 import Footer from "./Component/Footer/Footer";
 import Resume from "./Component/Resume/Resume";
 import Sample from "./Component/Sample/Sample";
