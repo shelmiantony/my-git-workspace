@@ -4,7 +4,7 @@ import { LinkedIn, GitHub, Twitter } from "@mui/icons-material";
 
 function Footer() {
   return (
-    <Box sx={{ backgroundColor: "#4CAF50", py: 2 }}>
+    <Box sx={{ backgroundColor: "#FFFFFF", py: 2 }}>
       <Container maxWidth="lg">
         <Grid container justifyContent={"space-between"} alignItems={"center"}>
           <Grid item>
