@@ -1,26 +1,27 @@
 // Todo.js
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import TodoList from "./TodoList";
-import FilterButtons from "./FilterCom";
-import { BsSearch, BsPlus } from "react-icons/bs";
-import { addTodo, updateSearchTerm } from "../../Redux/action";
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import TodoList from './TodoList';
+import FilterButtons from './FilterCom';
+import { BsSearch, BsPlus } from 'react-icons/bs';
+import { addTodo, updateSearchTerm } from '../../Redux/action';
 
 const Todo = () => {
   // const todos = useSelector((state) => state.todos);
   // const filter = useSelector((state) => state.filter);
   const dispatch = useDispatch();
-  const [newTodoText, setNewTodoText] = useState("");
-  const [searchTerm, setSearchTerm] = useState("");
+  const [newTodoText, setNewTodoText] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const handleAddTodo = (text) => {
     dispatch(addTodo(text));
   };
 
   const handleAddTodoClick = () => {
-    if (newTodoText.trim() !== "") {
+    console.log('clickedddddddd');
+    if (newTodoText.trim() !== '') {
       handleAddTodo(newTodoText.trim());
-      setNewTodoText("");
+      setNewTodoText('');
     }
   };
 
