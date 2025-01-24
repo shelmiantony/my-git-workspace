@@ -4,11 +4,12 @@ import { increment, decrement, reset, removeCounter } from '../../Redux/action';
 
 const Counter = () => {
   const counters = useSelector((state) => state.counter);
+  console.log('countersss', counters);
   const dispatch = useDispatch();
 
   return (
     <div>
-      {/* <h2>Counter List</h2>
+      <h2>Counter List</h2>
       {counters.length === 0 && <p>No counters available. Add one!</p>}
       <ul>
         {counters.map((counter) => (
@@ -26,7 +27,7 @@ const Counter = () => {
             </button>
           </li>
         ))}
-      </ul> */}
+      </ul>
     </div>
   );
 };
