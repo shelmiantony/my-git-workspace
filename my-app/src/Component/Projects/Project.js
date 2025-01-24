@@ -1,20 +1,21 @@
-import React from "react";
+import React from 'react';
 import {
   Container,
   Typography,
   Card,
   CardContent,
   Box,
-  Grid
-} from "@mui/material";
-import Game from "../TicTacToe/Game";
-import Todo from "../ToddoApp/Toddo";
+  Grid,
+} from '@mui/material';
+import Game from '../TicTacToe/Game';
+import Todo from '../ToddoApp/Toddo';
+import Counter from '../Counter';
 function Project() {
   return (
     <Container
       maxWidth="lg"
       className="py-20"
-      style={{ backgroundColor: "#F4ECE6" }}>
+      style={{ backgroundColor: '#F4ECE6' }}>
       <Box py={6} textAlign="center">
         <Typography
           variant="h3"
@@ -28,7 +29,7 @@ function Project() {
           <Box display="flex" justifyContent="center" mb={4}>
             <Card
               className="bg-gray-200"
-              style={{ maxWidth: "600px", width: "100%" }}>
+              style={{ maxWidth: '600px', width: '100%' }}>
               <CardContent>
                 <Game />
               </CardContent>
@@ -40,6 +41,15 @@ function Project() {
             <Card>
               <CardContent>
                 <Todo />
+              </CardContent>
+            </Card>
+          </Box>
+        </Grid>
+        <Grid item xs={12}>
+          <Box display="flex" justifyContent="center" mb={4}>
+            <Card>
+              <CardContent>
+                <Counter />
               </CardContent>
             </Card>
           </Box>

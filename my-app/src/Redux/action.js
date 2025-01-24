@@ -8,7 +8,12 @@ import {
   FILTER_TODOS,
   MARK_ALL_COMPLETED,
   UPDATE_SEARCH_TERM,
-} from "./actionType";
+  ADD_COUNTER,
+  INCREMENT,
+  DECREMENT,
+  RESET,
+  REMOVE_COUNTER,
+} from './actionType';
 
 export const addTodo = (text) => ({
   type: ADD_TODO,
@@ -47,4 +52,24 @@ export const markAllCompleted = () => ({
 export const updateSearchTerm = (searchTerm) => ({
   type: UPDATE_SEARCH_TERM,
   payload: { searchTerm },
+});
+
+export const addCounter = () => ({
+  type: ADD_COUNTER,
+});
+export const increment = (id) => ({
+  type: INCREMENT,
+  payload: id,
+});
+export const decrement = (id) => ({
+  type: DECREMENT,
+  payload: id,
+});
+export const reset = (id) => ({
+  type: RESET,
+  payload: id,
+});
+export const removeCounter = (id) => ({
+  type: REMOVE_COUNTER,
+  payload: id,
 });
